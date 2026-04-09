@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Amit ❤️ Kirti Wedding</title>
+
+<style>
+body {font-family: Arial; text-align:center; background:#fff8f0; margin:0;}
+.container {padding:20px;}
+.btn {padding:10px 20px; margin:10px; background:#b76e79; color:white; border:none; border-radius:5px;}
+.hidden {display:none;}
+h1 {color:#b76e79;}
+#countdown {font-size:20px; margin:15px; color:#444;}
+</style>
+
+<script>
+function showLang(lang){
+  document.getElementById('en').style.display='none';
+  document.getElementById('mr').style.display='none';
+  document.getElementById(lang).style.display='block';
+}
+
+// Countdown
+var countDate = new Date("Apr 26, 2026 12:37:00").getTime();
+setInterval(function() {
+  var now = new Date().getTime();
+  var gap = countDate - now;
+
+  var d = Math.floor(gap / (1000 * 60 * 60 * 24));
+  var h = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var m = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+  var s = Math.floor((gap % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML =
+    "⏳ " + d + "d " + h + "h " + m + "m " + s + "s left";
+
+}, 1000);
+
+// Play music after click (mobile-friendly)
+function playMusic(){
+  var audio = document.getElementById("bgmusic");
+  audio.play();
+}
+</script>
+</head>
+
+<body onclick="playMusic()">
+
+<div class="container">
+  <h1>💍 Amit ❤️ Kirti 💍</h1>
+
+  <div id="countdown"></div>
+
+  <p>Select Language / भाषा निवडा</p>
+
+  <button class="btn" onclick="showLang('en')">English</button>
+  <button class="btn" onclick="showLang('mr')">मराठी</button>
+
+  <!-- English -->
+  <div id="en" class="hidden">
+    <h2>Wedding Invitation</h2>
+    <p>We are delighted to invite you</p>
+    <p><b>Date:</b> 26 April 2026</p>
+    <p><b>Time:</b> 12:37 PM</p>
+    <p><b>Venue:</b> Shalu Mangal Karyalay, Sawantwadi</p>
+  </div>
+
+  <!-- Marathi -->
+  <div id="mr" class="hidden">
+    <h2>लग्नाचे निमंत्रण</h2>
+    <p>आपणास सस्नेह आमंत्रण</p>
+    <p><b>दिनांक:</b> २६ एप्रिल २०२६</p>
+    <p><b>वेळ:</b> १२:३७ दुपारी</p>
+    <p><b>स्थळ:</b> शालू मंगल कार्यालय, सावंतवाडी</p>
+  </div>
+
+</div>
+
+<!-- Background Music -->
+<audio id="bgmusic" loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+    </html>
