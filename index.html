@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amit and Kirti Wedding</title>
+<p class="developer">Developed by Rohit Pardeshi</p>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial;
+        text-align: center;
+        background: url("Background.jpg") no-repeat center/cover;
+        color: white;
+    }
+
+    .overlay {
+        background: rgba(0,0,0,0.6);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    img {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 12px 25px;
+        margin: 10px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background: gold;
+    }
+
+    button:hover {
+        background: orange;
+    }
+	
+	.developer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #ffd700;
+    opacity: 0.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+    <h1>Amit and Kirti Wedding</h1>
+
+    <!-- Ganpati Image -->
+    <img src="Ganesha.jpg" alt="Ganpati">
+
+    <!-- Buttons -->
+    <div>
+        <button onclick="location.href='english.html'">English</button>
+        <button onclick="location.href='marathi.html'">Marathi</button>
+    </div>
+</div>
+
+<!-- Shehnai Music -->
+<audio id="music" loop>
+    <source src="sehnai_marriage.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="playMusic()">🎶 Play Music</button>
+
+<script>
+function playMusic() {
+    var audio = document.getElementById("music");
+    audio.play();
+}
+</script>
+
+</body>
+</html>

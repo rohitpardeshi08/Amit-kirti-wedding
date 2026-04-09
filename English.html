@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wedding Details</title>
+<p class="developer">Developed by Rohit Pardeshi</p>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: Arial;
+        text-align: center;
+        background: url("Background.jpg") no-repeat center/cover;
+        color: white;
+		h1 {
+		font-family: 'Boldonse', cursive;
+			}
+
+		p {
+		font-family: 'Poppins', sans-serif;
+		  }
+    }
+
+    .overlay {
+        background: rgba(0,0,0,0.6);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        font-size: 20px;
+        margin: 5px;
+    }
+
+    a {
+        color: gold;
+        font-size: 20px;
+        text-decoration: underline;
+    }
+	.developer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #ffd700;
+    opacity: 0.8;
+	
+	.spacer {
+    margin-right:80px; /* Adds 20px of space to the right of the link */
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+    <h1>Amit and Kirti Wedding</h1>
+    <p>Pardeshi Family Welcomes You...!</p>
+    <p>Date:- Sunday, 26 April 2026</p>
+    <p>Time:- 12:37 P.M.</p>
+    <p>Venue: Shalu Mangal Karyala,Near Sawantwadi, Railway Station Rd Malgaon, Tal: Sawantwadi, Dist: Sindhudurg</p>
+    <p>Time:- 12:37 P.M.</p>
+
+    <br>
+	
+	<style>
+  
+</style>
+
+    <a href="https://maps.app.goo.gl/8qEn85MLiJ1XzC919" target="_blank">
+        Click for the location
+    </a>
+	
+	<a href="English_MarriageCard.jpg" target="_blank">
+        Click for Wedding Card
+    </a>
+</div>
+
+<!-- Shehnai Music -->
+<audio id="music" loop>
+    <source src="sehnai_marriage.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="playMusic()">🎶 Play Music</button>
+
+<script>
+function playMusic() {
+    var audio = document.getElementById("music");
+    audio.play();
+}
+</script>
+</body>
+</html>
